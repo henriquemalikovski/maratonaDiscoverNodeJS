@@ -1,8 +1,12 @@
 const express = require("express");
 const server = express();
 const routes = require("./routes.js");
+const path = require("path");
 
 server.set("view engine", "ejs");
+
+// mudar a localização da pasta viwes
+server.set("views", path.join(__dirname, "views"));
 
 //Habilitar os arquivos estaticos
 server.use(express.static("public"));
