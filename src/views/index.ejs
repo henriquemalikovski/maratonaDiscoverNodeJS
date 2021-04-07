@@ -78,9 +78,10 @@
         <h1 class="sr-only">Trabalhos</h1>
 
         <div class="cards">
-          <% jobs.forEach((job) => { %>
+          <% let x = 0; 
+            jobs.forEach((job) => { x++;%>
             <div class="card <%= job.status %> " data-id="<% job.id %>">
-              <div class="id column"><%= job.id %>  </div>
+              <div class="id column"><%= x %>  </div>
               <div class="name column">
                 <%= job.name %> 
               </div>
