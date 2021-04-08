@@ -22,7 +22,7 @@
       rel="stylesheet"
     />
 
-    <script src="scripts/index.js" defer type="module"></script>
+    <script src="/scripts/index.js" defer type="module"></script>
   </head>
   <body id="page-index">
     <header class="page-header">
@@ -80,7 +80,7 @@
         <div class="cards">
           <% let x = 0; 
             jobs.forEach((job) => { x++;%>
-            <div class="card <%= job.status %> " data-id="<% job.id %>">
+            <div class="card <%= job.status %> " data-id="<%= job.id %>">
               <div class="id column"><%= x %>  </div>
               <div class="name column">
                 <%= job.name %> 
@@ -110,9 +110,9 @@
                   title="Editar Job">
                   <img src="/images/edit-24.svg" alt="Editar Job" />
                 </a>
-                <!-- <button class="delete button white" title="Excluir Job">
+                <button class="delete button white" title="Excluir Job">
                   <img src="/images/trash-24.svg" alt="Excluir Job" />
-                </button> -->
+                </button>
               </div>
             </div>
             <!-- end card -->
